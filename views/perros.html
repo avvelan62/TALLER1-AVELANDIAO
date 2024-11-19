@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La favorita</title>
+</head>
+<body>
+    <main>
+        <h1>La favorita</h1>
+        <table cellspacing="15" cellpadding="10">
+            <tr>
+                <td style="vertical-align: top;">
+                    <h2>Lista de perros</h2>
+                    <table cellspacing="5" cellpadding="8">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Raza</th>
+                            <th>Edad</th>
+                            <th>Peso</th>
+                        </tr>
+                        {% for perro in perros[0] %}
+                        <tr>
+                            <td>{{ perro.nombre }}</td>
+                            <td>{{ perro.raza }}</td>
+                            <td>{{ perro.edad }}</td>
+                            <td>{{ perro.peso }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </td>
+                <td style="vertical-align: top;">
+                    <h2>Lista de perros de Mario</h2>
+                    <table cellspacing="5" cellpadding="8">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Raza</th>
+                            <th>Edad</th>
+                            <th>Peso</th>
+                        </tr>
+                        {% for perro in perros[2] %}
+                        <tr>
+                            <td>{{ perro.nombre }}</td>
+                            <td>{{ perro.raza }}</td>
+                            <td>{{ perro.edad }}</td>
+                            <td>{{ perro.peso }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </td>
+                <td style="vertical-align: top;">
+                    <h2>Cantidad perros Lassie: </h2><h3>Hay {{ perros[1] }} perros llamados Lassie.</h3>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
